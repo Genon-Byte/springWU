@@ -1,0 +1,52 @@
+
+#navigation {
+  display:flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #bbb;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-color: solid white;
+}
+
+.interactable {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#top {
+    grid-area: to;
+    width: 400px;
+    height: 400px;
+}
+
+#bild {
+    grid-area: bi;
+    width: 400px;
+    height: 400px;
+}
+
+#bottom {
+    grid-area: bo;
+    width: 400px;
+    height: 400px;
+}
+
+@media screen and (max-width:480px){
+    #Homepage {
+    grid-template-areas: 
+    'to'
+    'bi'
+    'bo';
+}
+}
+
+@media screen and (min-width:481px){
+    #Homepage {
+    grid-template-areas: 
+    ;
+}
+}
