@@ -11,28 +11,141 @@
   border-color: solid white;
 }
 
+#header {
+    width: auto;
+    height: 50px;
+    background-color: burlywood;
+}
+
 .interactable {
-    display: flex;
+    display: grid;
     flex-direction: column;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 #top {
     grid-area: to;
-    width: 400px;
+    width: auto;
     height: 400px;
+    background-color: green;
 }
 
 #bild {
     grid-area: bi;
-    width: 400px;
+    width: auto;
     height: 400px;
+    background-color: pink;
 }
 
 #bottom {
     grid-area: bo;
-    width: 400px;
+    width: auto;
     height: 400px;
+    background-color: white;
+}
+
+#Sc1 {
+    grid-area: S1;
+    width: auto;
+    border-color: black;
+    border: solid 2px;
+    height: 200px;
+}
+
+#Sc2 {
+    grid-area: S2;
+    width: auto;
+    border-color: black;
+    border: solid 2px;
+    height: 200px;
+}
+
+#Sc3 {
+    grid-area: S3;
+    width: auto;
+    border-color: black;
+    border: solid 2px;
+    height: 200px;
+}
+
+#Sc4 {
+    grid-area: S4;
+    width: auto;
+    border-color: black;
+    border: solid 2px;
+    height: 200px;
+}
+
+#Sc5 {
+    grid-area: S5;
+    width: auto;
+    border-color: black;
+    border: solid 2px;
+    height: 200px;
+}
+
+#Sc6 {
+    grid-area: S6;
+    width: auto;
+    border-color: black;
+    border: solid 2px;
+    height: 200px;
+}
+
+#Yellow_card {
+    grid-area: Ye;
+    width: auto;
+    height: 500px;
+    border-color: black;
+    border: solid 2px;
+}
+
+#Green_card {
+    grid-area: Gr;
+    width: auto;
+    height: 500px;
+    border-color: black;
+    border: solid 2px;
+}
+
+#Red_card {
+    grid-area: Re;
+    width: auto;
+    height: 500px;
+    border-color: black;
+    border: solid 2px;
+}
+
+#T1 {
+    grid-area: T-1;
+    width: auto;
+    height: 100px;
+    border-color: black;
+    border: solid 2px;
+}
+
+#T2 {
+    grid-area: T-2;
+    width: auto;
+    height: 200px;
+    border-color: black;
+    border: solid 2px;
+}
+
+#T3 {
+    grid-area: T-3;
+    width: auto;
+    height: 600px;
+    border-color: black;
+    border: solid 2px;
+}
+
+#T4 {
+    grid-area: T-4;
+    width: auto;
+    height: 200px;
+    border-color: black;
+    border: solid 2px;
 }
 
 @media screen and (max-width:480px){
@@ -41,7 +154,35 @@
     'to'
     'bi'
     'bo';
+    display: grid;
 }
+   #Shop {
+    grid-template-areas: 
+    'S1'
+    'S2'
+    'S3'
+    'S4'
+    'S5'
+    'S6';
+    display: grid;
+   }
+
+   #Climbingcards {
+    grid-template-areas: 
+    'Ye'
+    'Gr'
+    'Re';
+    display: grid;
+   }
+
+   #About_us {
+    grid-template-areas: 
+    'T-1'
+    'T-2'
+    'T-3'
+    'T-4';
+    display: grid;
+   }
 }
 
 @media screen and (min-width:481px){
@@ -50,3 +191,4 @@
     ;
 }
 }
+
