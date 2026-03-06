@@ -1,3 +1,9 @@
+:root {
+    --birch-bg-color-: blue;
+    --birch-padding-: 15px;
+    --birch-border-radius-: 10px;
+    --birch-margin-:7px;
+}
 
 #navigation {
   display:flex;
@@ -5,7 +11,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #bbb;
+  background-color: rgb(220, 196, 166);
   padding: 10px 0;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   border-color: solid white;
@@ -15,33 +21,67 @@
     width: auto;
     height: 50px;
     background-color: burlywood;
-}
-
-.interactable {
     display: grid;
     flex-direction: column;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    border-radius: var(--birch-border-radius-);
+}
+
+.interactable_title {
+    text-decoration: none;
+    color: black;
+    width:210px;
+    align-content: center;
+}
+
+.interactable {
+    text-decoration: none;
+    color: black;
+    width:90px;
+    font-size: auto;
+    padding: 5px;
+    align-content: center;
+}
+
+#top, #bild, #bottom {
+  margin: var(--birch-padding-);
+  border-radius: var(--birch-border-radius-);
+}
+
+#Sc1, #Sc2, #Sc3, #Sc4, #Sc5, #Sc6 {
+  margin: var(--birch-padding-);
+  border-radius: var(--birch-border-radius-);
+}
+
+#Yellow_card, #Green_card, #Red_card {
+  margin: var(--birch-padding-);
+  border-radius: var(--birch-border-radius-);
+}
+
+#T1, #T2, #T3, #T4 {
+  margin: var(--birch-padding-);
+  border-radius: var(--birch-border-radius-);
 }
 
 #top {
     grid-area: to;
     width: auto;
     height: 400px;
-    background-color: green;
+    background-color: rgb(149, 149, 191);
 }
 
 #bild {
     grid-area: bi;
     width: auto;
     height: 400px;
-    background-color: pink;
+    background-color: rgb(134, 188, 202);
 }
 
 #bottom {
     grid-area: bo;
     width: auto;
     height: 400px;
-    background-color: white;
+    background-color: rgb(106, 150, 177);
 }
 
 #Sc1 {
@@ -150,6 +190,7 @@
 
 @media screen and (max-width:480px){
     #Homepage {
+    padding-top: 100px;
     grid-template-areas: 
     'to'
     'bi'
@@ -157,6 +198,7 @@
     display: grid;
 }
    #Shop {
+    padding-top: 100px;
     grid-template-areas: 
     'S1'
     'S2'
@@ -168,6 +210,7 @@
    }
 
    #Climbingcards {
+    padding-top: 100px;
     grid-template-areas: 
     'Ye'
     'Gr'
@@ -176,6 +219,7 @@
    }
 
    #About_us {
+    padding-top: 100px;
     grid-template-areas: 
     'T-1'
     'T-2'
