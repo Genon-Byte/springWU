@@ -17,10 +17,28 @@
     </nav>
   </header>
   <nav></nav>
-  <section id="top"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem porro, doloremque labore sit in, mollitia enim beatae nam at eaque provident et ad nisi quis sint odio iure totam blanditiis?</p></section>
-  <section id="bild"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore non atque voluptatum fugit voluptatibus explicabo, unde, eveniet iste quisquam, debitis maxime doloremque quae placeat? Illo libero repudiandae soluta iste sunt.</p></section>
-  <section id="bottom"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde repellat, ex exercitationem obcaecati dolorum tempore sapiente! Dolor praesentium ut fuga illum et perferendis asperiores quibusdam ullam, accusamus iure eveniet provident?</p></section>
+  <section id="top_side"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem porro, doloremque labore sit in, mollitia enim beatae nam at eaque provident et ad nisi quis sint odio iure totam blanditiis?</p></section>
+  <section id="bild_side"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore non atque voluptatum fugit voluptatibus explicabo, unde, eveniet iste quisquam, debitis maxime doloremque quae placeat? Illo libero repudiandae soluta iste sunt.</p></section>
+  <section id="bottom_side"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde repellat, ex exercitationem obcaecati dolorum tempore sapiente! Dolor praesentium ut fuga illum et perferendis asperiores quibusdam ullam, accusamus iure eveniet provident?</p></section>
+  <section id="top" class="fade-img"></section>
+  <section id="bild" class="fade-img"></section>
+  <section id="bottom" class="fade-img"></section>
   <nav></nav>
 </div>
 </body>
+<script>
+const elements = document.querySelectorAll('.fade-img');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+}, {
+  threshold: 0.2
+});
+
+elements.forEach(el => observer.observe(el));
+</script>
 </html>

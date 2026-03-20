@@ -1,8 +1,12 @@
 :root {
     --birch-bg-color-: blue;
-    --birch-padding-: 15px;
+    --birch-padding-: 8px;
     --birch-border-radius-: 10px;
     --birch-margin-:7px;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 #navigation {
@@ -15,6 +19,7 @@
   padding: 10px 0;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   border-color: solid white;
+  z-index: 1000;
 }
 
 #header {
@@ -43,9 +48,13 @@
     align-content: center;
 }
 
-#top, #bild, #bottom {
-  margin: var(--birch-padding-);
+#top, #top_side, #bild, #bild_side, #bottom, #bottom_side {
+  margin: 5%;
+  padding: var(--birch-padding-);
   border-radius: var(--birch-border-radius-);
+  width: 100%;
+  max-width: 100%;
+  align-content: center;
 }
 
 #Sc1, #Sc2, #Sc3, #Sc4, #Sc5, #Sc6 {
@@ -70,6 +79,27 @@
     background-color: rgb(149, 149, 191);
 }
 
+.fade-img {
+    opacity: 0;
+    transform: translateY(30px) scale(0.98);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-img.show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.fade-img:nth-child(1) { transition-delay: 0.1s; }
+.fade-img:nth-child(2) { transition-delay: 0.2s; }
+.fade-img:nth-child(3) { transition-delay: 0.3s; }
+
+#top_side {
+    grid-area: ts;
+    width: auto;
+    height: 400px;
+}
+
 #bild {
     grid-area: bi;
     width: auto;
@@ -77,11 +107,23 @@
     background-color: rgb(134, 188, 202);
 }
 
+#bild_side {
+    grid-area: is;
+    width: auto;
+    height: 400px;
+}
+
 #bottom {
     grid-area: bo;
     width: auto;
     height: 400px;
     background-color: rgb(106, 150, 177);
+}
+
+#bottom_side {
+    grid-area: bs;
+    width: auto;
+    height: 400px;
 }
 
 #Sc1 {
@@ -193,8 +235,11 @@
     padding-top: 100px;
     grid-template-areas: 
     'to'
+    'ts'
     'bi'
-    'bo';
+    'is'
+    'bo'
+    'bs';
     display: grid;
 }
    #Shop {
@@ -231,8 +276,28 @@
 
 @media screen and (min-width:481px){
     #Homepage {
+    padding-top: 100px;
+    padding-left: 5%;
+    padding-right: 5%;
     grid-template-areas: 
-    ;
-}
+    'to ts'
+    'is bi'
+    'bo bs';
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    }
+    #Shop {
+    padding-top: 100px;
+
+    }
+    #Climbingcards {
+    padding-top: 100px;
+    
+    
+    }
+    #About_us {
+    padding-top: 100px;
+
+    }
 }
 
