@@ -180,6 +180,7 @@
     height: 500px;
     border-color: black;
     border: solid 2px;
+    
 }
 
 #Green_card {
@@ -292,8 +293,37 @@
     }
     #Climbingcards {
     padding-top: 100px;
-    
-    
+    display: flex;
+    flex-direction: column;
+    }
+
+    #Yellow_card{
+    background-color: yellow;
+    display: grid;
+    }
+    #Container1{
+    display: grid;
+    grid-template-areas: 
+    'Ye';
+    }
+    #Green_card{
+    background-color: green;
+    display: grid;
+    }
+    #Container2{
+    display: grid;
+    grid-template-areas: 
+    'Gr';
+    }
+    #Red_card{
+    background-color: red;
+    display: grid;
+    }
+    #Container3{
+    display: grid;
+    grid-template-areas: 
+    'Re';
+    }
     }
     #About_us {
     padding-top: 100px;
