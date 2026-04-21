@@ -180,6 +180,38 @@
     background-color: beige;
 }
 
+#boxes{
+   grid-area: b; 
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+
+}
+#boximage{
+    max-height: 48vh;
+    max-width: 48vw;
+}
+#box {
+    opacity: 30%;
+    display: flex;
+    margin: 10px;
+    flex-direction: column;
+    text-align: center;
+    aspect-ratio: 1/1;
+    transition: 0.1s;
+    background-color: #8fa0bf;
+    max-height: 100vh;
+}
+#box:hover{
+    border: solid;
+    border-width: 1%;
+    border-color: #fcb08c;
+    box-shadow: #d6938a 10px 10px 10px;
+    opacity: 100%;
+    flex-wrap: wrap;
+    max-height: 60vh;
+}
+
 /* Slideshow container */
 .slideshow-container {
   max-width: 500px;
@@ -345,12 +377,12 @@
    #Shop {
     padding-top: 100px;
     grid-template-areas: 
-    'S1'
-    'S2'
-    'S3'
-    'S4'
-    'S5'
-    'S6';
+    'Sc1'
+    'Sc2'
+    'Sc3'
+    'Sc4'
+    'Sc5'
+    'Sc6';
     display: grid;
    }
 
@@ -388,7 +420,6 @@
     }
     #Shop {
     padding-top: 100px;
-
     }
     #Climbingcards {
     padding-top: 100px;
