@@ -16,11 +16,29 @@
       <a href="shop.html" class="interactable"><h3>Shop</h3></a>
     </nav>
   </header>
-  <section id="T1"></section>
-  <section id="T2"></section>
-  <section id="T3"></section>
-  <section id="T4"></section>
+  <section id="T1" class="fade-img"></section>
+  <section id="T2" class="fade-img"></section>
+  <section id="T3" class="fade-img"></section>
+  <section id="T4" class="fade-img"></section>
   <section id="T5"></section>
 </div>
 </body>
+<script>
+const elements = document.querySelectorAll('.fade-img');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+}, {
+  threshold: 0.2
+});
+
+elements.forEach(el => observer.observe(el));
+</script>
+</html>
+
+<script src="./js/main.js"></script>
 </html>

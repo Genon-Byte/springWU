@@ -185,6 +185,8 @@
    display: flex;
    flex-direction: row;
    flex-wrap: wrap;
+   padding-top: 200px;
+   justify-content: center;
 
 }
 #boximage{
@@ -194,12 +196,14 @@
 #box {
     opacity: 30%;
     display: flex;
+    width: 300px;
+    height: 60vh;
     margin: 10px;
     flex-direction: column;
     text-align: center;
     aspect-ratio: 1/1;
     transition: 0.1s;
-    background-color: #8fa0bf;
+    background-color: #856950;
     max-height: 100vh;
 }
 #box:hover{
@@ -305,61 +309,94 @@
   to {opacity: 1}
 }
 
-#Yellow_card {
+#Yellow_container {
     grid-area: Ye;
+    justify-content: left;
+    align-items: center;
     width: auto;
-    height: 500px;
-    border-color: black;
-    border: solid 2px;
+    height: 300px;
+    background-color: #717171;
+    display: flex;
+    border-radius: 10px;
+    margin-bottom: 10px;
     
 }
-
-#Green_card {
-    grid-area: Gr;
-    width: auto;
-    height: 500px;
-    border-color: black;
-    border: solid 2px;
+.Yellow_card {
+  height: 80%;
+  width: 20%;
+  overflow: hidden;
+  background-color: rgb(202, 202, 92);
+  border-radius: 10px;
 }
 
-#Red_card {
-    grid-area: Re;
+#Green_container {
+    grid-area: Gr;
+    justify-content: left;
+    align-items: center;
     width: auto;
-    height: 500px;
-    border-color: black;
-    border: solid 2px;
+    height: 300px;
+    background-color: #717171;
+    display: flex;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.Green_card {
+  height: 80%;
+  width: 20%;
+  overflow: hidden;
+  background-color: rgb(86, 183, 81);
+  border-radius: 10px;
+}
+
+#Red_container {
+    grid-area: Re;
+    justify-content: left;
+    align-items: center;
+    width: auto;
+    height: 300px;
+    background-color: #717171;
+    display: flex;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.Red_card {
+  height: 80%;
+  width: 20%;
+  overflow: hidden;
+  background-color: rgb(194, 84, 84);
+  border-radius: 10px;
 }
 
 #T1 {
     grid-area: T-1;
     width: auto;
-    height: 100px;
-    border-color: black;
-    border: solid 2px;
+    height: 200px;
+    border-color: none;
+    background-color: #d6938a;
 }
 
 #T2 {
     grid-area: T-2;
     width: auto;
-    height: 200px;
-    border-color: black;
-    border: solid 2px;
+    height: 1fr;
+    border-color: none;
+    background-color: #fcb08c;
 }
 
 #T3 {
     grid-area: T-3;
     width: auto;
-    height: 600px;
-    border-color: black;
-    border: solid 2px;
+    height: 200px;
+    border-color: none;
+    background-color: #856950;
 }
 
 #T4 {
     grid-area: T-4;
     width: auto;
     height: 200px;
-    border-color: black;
-    border: solid 2px;
+    border-color: none;
+    background-color: beige;
 }
 
 @media screen and (max-width:480px){
@@ -426,38 +463,14 @@
     display: flex;
     flex-direction: column;
     }
-
-    #Yellow_card{
-    background-color: yellow;
-    display: grid;
-    }
-    #Container1{
-    display: grid;
-    grid-template-areas: 
-    'Ye';
-    }
-    #Green_card{
-    background-color: green;
-    display: grid;
-    }
-    #Container2{
-    display: grid;
-    grid-template-areas: 
-    'Gr';
-    }
-    #Red_card{
-    background-color: red;
-    display: grid;
-    }
-    #Container3{
-    display: grid;
-    grid-template-areas: 
-    'Re';
-    }
-    }
     #About_us {
     padding-top: 100px;
-
+    display: grid;
+    grid-template-areas: 
+    'T-1 T-1 T-2'
+    'T-3 T-3 T-2'
+    'T-4 T-4 T-4';
     }
-}
+  }
+
 

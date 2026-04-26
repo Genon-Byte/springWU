@@ -16,12 +16,42 @@
       <a href="shop.html" class="interactable"><h3>Shop</h3></a>
     </nav>
   </header>
-  <section id="Yellow_card"></section>
-  <section id="Cointaner1"></section>
-  <section id="Green_card"></section>
-  <section id="Cointaner2"></section>
-  <section id="Red_card"></section>
-  <section id="Cointaner3"></section>
+  <div id="Yellow_container">
+  <div class="Yellow_card">
+    <img src="">
+  </div>
+  okokokokokokoko
+  </div>
+  <div id="Red_container">
+  <div class="Red_card">
+    <img src="">
+  </div>
+  okokokokokoko
+  </div>
+  <div id="Green_container">
+  <div class="Green_card">
+    <img src="">
+  </div>
+  okokokokokokok
+  </div>
 </div>
 </body>
+<script>
+const elements = document.querySelectorAll('.fade-img');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+}, {
+  threshold: 0.2
+});
+
+elements.forEach(el => observer.observe(el));
+</script>
+</html>
+
+<script src="./js/main.js"></script>
 </html>
